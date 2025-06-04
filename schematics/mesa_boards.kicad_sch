@@ -1,0 +1,15 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 3b372155-13c8-4624-b969-afe4b317594c)
+
+  (paper "A4")
+
+  (title_block
+    (title "Gantry Robot - MESA boards ")
+    (company "CITIC Research Center & Department of Computer Engineering, University of A Coruña")
+  )
+
+  (lib_symbols
+  )
+
+)

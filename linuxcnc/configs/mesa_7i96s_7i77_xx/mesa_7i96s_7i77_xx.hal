@@ -1,0 +1,207 @@
+loadrt [KINS]KINEMATICS
+loadrt [EMCMOT]EMCMOT servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JOINTS
+
+loadrt hostmot2
+loadrt hm2_eth board_ip="10.68.33.122" config="num_encoders=2 num_pwmgens=0 num_stepgens=1" 
+loadrt pid names=pid.x1,pid.x2
+loadrt estop_latch
+loadrt oneshot
+
+# set 7i96s watchdog timeout
+setp hm2_7i96s.0.watchdog.timeout_ns 5000000
+
+# configure hostmod2 dpll (phased locked loop)
+setp hm2_7i96s.0.dpll.01.timer-us -100
+setp hm2_7i96s.0.stepgen.timer-number 1
+setp hm2_7i96s.0.encoder.timer-number 1
+
+# ddt module for calculating acceleration
+loadrt ddt count=1
+addf ddt.0 servo-thread
+net X-vel joint.0.vel-cmd => ddt.0.in
+
+# configure oneshot
+setp oneshot.0.width 0.1
+
+# add functions to servo thread
+addf motion-command-handler servo-thread
+addf motion-controller servo-thread
+addf hm2_7i96s.0.read servo-thread
+addf hm2_7i96s.0.write servo-thread
+addf pid.x1.do-pid-calcs servo-thread
+addf pid.x2.do-pid-calcs servo-thread
+addf estop-latch.0 servo-thread
+addf oneshot.0 servo-thread
+
+
+#********************
+# AXIS X --- JOINT 0
+#********************
+
+# --- PID parameters ---
+
+setp pid.x1.Pgain     [JOINT_0]P
+setp pid.x1.Igain     [JOINT_0]I
+setp pid.x1.Dgain     [JOINT_0]D
+setp pid.x1.bias      [JOINT_0]BIAS
+setp pid.x1.FF0       [JOINT_0]FF0
+setp pid.x1.FF1       [JOINT_0]FF1
+setp pid.x1.FF2       [JOINT_0]FF2
+setp pid.x1.deadband  [JOINT_0]DEADBAND
+setp pid.x1.maxoutput [JOINT_0]MAX_OUTPUT
+setp pid.x1.error-previous-target true
+
+# This setting is to limit bogus stepgen
+# velocity corrections caused by position
+# feedback sample time jitter.
+setp pid.x1.maxerror 1
+
+
+# --- Step Gen parameters ---
+
+setp hm2_7i96s.0.stepgen.00.control-type   1  # Velocity control
+setp hm2_7i96s.0.stepgen.00.step_type      0  # Step/dir
+# setp hm2_7i96s.0.stepgen.00.direction.invert_output 1 # Invert direction signal
+setp hm2_7i96s.0.stepgen.00.dirsetup       [JOINT_0]DIRSETUP
+setp hm2_7i96s.0.stepgen.00.dirhold        [JOINT_0]DIRHOLD
+setp hm2_7i96s.0.stepgen.00.steplen        [JOINT_0]STEPLEN
+setp hm2_7i96s.0.stepgen.00.stepspace      [JOINT_0]STEPSPACE
+setp hm2_7i96s.0.stepgen.00.position-scale [JOINT_0]STEP_SCALE
+setp hm2_7i96s.0.stepgen.00.maxaccel       [JOINT_0]STEPGEN_MAXACCEL
+setp hm2_7i96s.0.stepgen.00.maxvel         [JOINT_0]STEPGEN_MAXVEL
+
+
+# --- Encoder parameters ---
+
+setp hm2_7i96s.0.encoder.00.counter-mode 0
+setp hm2_7i96s.0.encoder.00.filter 1
+setp hm2_7i96s.0.encoder.00.scale [JOINT_0]ENCODER_SCALE
+
+
+# --- Connect pid / stepgen / motion signals ----
+
+net pid-x1-index-enable => pid.x1.index-enable
+
+net pid-x1-output <= pid.x1.output
+net pid-x1-output => hm2_7i96s.0.stepgen.00.velocity-cmd
+
+net pid-x1-enable <= joint.0.amp-enable-out
+net pid-x1-enable => pid.x1.enable
+net pid-x1-enable => hm2_7i96s.0.stepgen.00.enable
+
+net pid-x1-pos-cmd <= joint.0.motor-pos-cmd
+net pid-x1-pos-cmd => pid.x1.command
+
+# net pid-x1-pos-fb <= hm2_7i96s.0.stepgen.00.position-fb
+net pid-x1-pos-fb <= hm2_7i96s.0.encoder.00.position
+net pid-x1-pos-fb => pid.x1.feedback
+net pid-x1-pos-fb => joint.0.motor-pos-fb
+
+
+# --- setup home / limit switch signals ---
+
+# net x-home-sw => joint.0.home-sw-in
+# net x-home-sw => joint.0.neg-lim-sw-in
+# net x-home-sw <= hm2_7i96s.0.gpio.000.in
+
+
+#********************
+# AXIS X --- JOINT 1
+#********************
+
+# --- PID parameters ---
+
+setp pid.x2.Pgain     [JOINT_1]P
+setp pid.x2.Igain     [JOINT_1]I
+setp pid.x2.Dgain     [JOINT_1]D
+setp pid.x2.bias      [JOINT_1]BIAS
+setp pid.x2.FF0       [JOINT_1]FF0
+setp pid.x2.FF1       [JOINT_1]FF1
+setp pid.x2.FF2       [JOINT_1]FF2
+setp pid.x2.deadband  [JOINT_1]DEADBAND
+setp pid.x2.maxoutput [JOINT_1]MAX_OUTPUT
+setp pid.x2.error-previous-target true
+
+# This setting is to limit bogus stepgen
+# velocity corrections caused by position
+# feedback sample time jitter.
+setp pid.x2.maxerror 1
+
+
+# --- Analog output parameters ---
+
+setp hm2_7i96s.0.7i77.0.1.analogout0-maxlim [JOINT_1]ANALOGOUT_MAXLIM
+setp hm2_7i96s.0.7i77.0.1.analogout0-minlim [JOINT_1]ANALOGOUT_MINLIM
+setp hm2_7i96s.0.7i77.0.1.analogout0-scalemax [JOINT_1]ANALOGOUT_SCALE
+
+
+# --- Encoder parameters ---
+
+setp hm2_7i96s.0.encoder.01.counter-mode 0
+setp hm2_7i96s.0.encoder.01.filter 1
+setp hm2_7i96s.0.encoder.01.scale [JOINT_1]ENCODER_SCALE
+
+
+# --- Connect pid / analog / motion signals ----
+
+net pid-x2-index-enable => pid.x2.index-enable
+
+net pid-x2-output <= pid.x2.output
+net pid-x2-output => hm2_7i96s.0.7i77.0.1.analogout0
+
+net pid-x2-enable <= joint.1.amp-enable-out
+net pid-x2-enable => pid.x2.enable
+net pid-x2-enable => hm2_7i96s.0.7i77.0.1.analogena 
+
+net pid-x2-pos-cmd <= joint.1.motor-pos-cmd
+net pid-x2-pos-cmd => pid.x2.command
+
+net pid-x2-pos-fb <= hm2_7i96s.0.encoder.01.position
+net pid-x2-pos-fb => pid.x2.feedback
+net pid-x2-pos-fb => joint.1.motor-pos-fb
+
+
+# --- setup home / limit switch signals ---
+
+# net x-home-sw => joint.0.home-sw-in
+# net x-home-sw => joint.0.neg-lim-sw-in
+# net x-home-sw <= hm2_7i96s.0.gpio.000.in
+
+
+
+#***********************
+# Miscellaneous signals
+#***********************
+
+# --- ESTOP ---
+net user-enable <= iocontrol.0.user-enable-out
+net user-enable => estop-latch.0.ok-in
+
+net user-request-enable <= iocontrol.0.user-request-enable
+net user-request-enable => estop-latch.0.reset
+
+net remote-estop <= hm2_7i96s.0.7i77.0.0.input-13
+net remote-estop => estop-latch.0.fault-in
+
+net emc-enable <= estop-latch.0.ok-out
+net emc-enable => iocontrol.0.emc-enable-in
+
+# --- Enable joints ---
+net machine-on <= halui.machine.is-on
+net machine-on => hm2_7i96s.0.7i77.0.0.output-00
+
+# --- Start brushless rotation program ---
+net brushless-ready <= hm2_7i96s.0.7i77.0.0.input-00
+net brushless-ready => oneshot.0.in
+
+net start-brushless <= oneshot.0.out
+net start-brushless => hm2_7i96s.0.7i77.0.0.output-01
+
+
+#******
+# TEST 
+#******
+
+# loop position commands back to motion module feedback
+# net Xpos <= joint.0.motor-pos-cmd
+# net Xpos => joint.0.motor-pos-fb
