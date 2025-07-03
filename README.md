@@ -9,7 +9,10 @@
 
 </div>
 
-[**Demo Video**](media/prototype_video.webm)
+<!-- Video uploaded via drag-and-drop to the GitHub editor -->
+<!-- Note: GitHub does not render video files from the repository. See: https://github.com/orgs/community/discussions/19403 -->
+<!-- The video is also stored at media/testbed_video.webm within the repo -->
+<video src="https://github.com/user-attachments/assets/f6507526-396f-41c5-9737-cb749e45726b"><video/>
 
 ## Overview
 
