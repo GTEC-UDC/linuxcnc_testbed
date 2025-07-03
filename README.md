@@ -1,24 +1,24 @@
 # LinuxCNC Motor Control Testbed
 
+A motor control testbed using the open-source [LinuxCNC](https://www.linuxcnc.org) platform integrated with the [Mesa Electronics](https://store.mesanet.com/) 7i96S and 7I77 interface cards and the [igus® dryve D1](https://www.igus.eu/product/D1) motor controllers.
+
+This system was used to to develop and validate the control system for [a large high-precision 3-axis gantry robot system](https://github.com/GTEC-UDC/linuxcnc_gantry_robot).
+
 <div align="center">
-
-<img src="media/testbed_picture.jpg" style="width:100%; max-width:700px;"/>
-
+  
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-limegreen.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![Documentation](https://img.shields.io/badge/docs-sphinx-blue.svg)](docs/)
 
 </div>
 
+<div align="center">
+  <img src="media/testbed_picture.jpg" width="700"/>
+</div>
+
 <!-- Video uploaded via drag-and-drop to the GitHub editor -->
 <!-- Note: GitHub does not render video files from the repository. See: https://github.com/orgs/community/discussions/19403 -->
 <!-- The video is also stored at media/testbed_video.webm within the repo -->
-<video src="https://github.com/user-attachments/assets/f6507526-396f-41c5-9737-cb749e45726b"><video/>
-
-## Overview
-
-A motor control testbed using the open-source [LinuxCNC](https://www.linuxcnc.org) platform integrated with the [Mesa Electronics](https://store.mesanet.com/) 7i96S and 7I77 interface cards and the [igus® dryve D1](https://www.igus.eu/product/D1) motor controllers.
-
-This system was used to to develop and validate the control system for a gantry robot.
+<video type="video/webm" src="https://github.com/user-attachments/assets/f6507526-396f-41c5-9737-cb749e45726b"><video/>
 
 ## Key Features
 
@@ -32,16 +32,15 @@ This system was used to to develop and validate the control system for a gantry 
 
 The following documentation is provided in this repository:
 
-- **Technical Documentation**: Complete system documentation and setup guide in `docs/`
-- **Electrical Installation**: KiCAD electrical schematics in `electrical_installation/`
+- **Technical Documentation**: [Sphinx](https://www.sphinx-doc.org) documentation sources in [/docs](docs/). To build the documentation execute the following commands:
 
-To build the Sphinx documentation:
+  ```bash
+  cd docs
+  pip install -r requirements.txt
+  make html
+  ```
 
-```bash
-cd docs
-pip install -r requirements.txt
-make html
-```
+- **Electrical Schematics**: [KiCAD](https://www.kicad.org/) electrical schematics in [/schematics](schematics/).
 
 ## Hardware Components
 
