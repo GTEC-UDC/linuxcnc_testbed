@@ -12,12 +12,12 @@ This system was used to to develop and validate the control system for [a large 
 </div>
 
 <div align="center">
-  <img src="media/testbed_picture.jpg" width="700"/>
+  <img alt="LinuxCNC Motor Control Testbed Picture" src="assets/testbed_picture.jpg" width="700"/>
 </div>
 
 <!-- Video uploaded via drag-and-drop to the GitHub editor -->
 <!-- Note: GitHub does not render video files from the repository. See: https://github.com/orgs/community/discussions/19403 -->
-<!-- The video is also stored at media/testbed_video.webm within the repo -->
+<!-- The video is also stored at assets/testbed_video.webm within the repo -->
 <video type="video/webm" src="https://github.com/user-attachments/assets/f6507526-396f-41c5-9737-cb749e45726b"><video/>
 
 ## Key Features
@@ -40,6 +40,9 @@ The following documentation is provided in this repository:
   make html
   ```
 
+  > [!NOTE]  
+  > Currently the technical documentation is only provided in Spanish.
+
 - **Electrical Schematics**: [KiCAD](https://www.kicad.org/) electrical schematics in [/schematics](schematics/).
 
 ## Hardware Components
@@ -59,22 +62,33 @@ The following documentation is provided in this repository:
 
 ## System Architecture
 
-![Prototype System](media/system_diagram.svg)
+![Prototype System](assets/system_diagram.svg)
 
 ## Repository Structure
 
 ```txt
 linuxcnc-testbed/
 ├── README.md      # This file
-├── media/         # Pictures and videos
+├── assets/        # Pictures and videos
 ├── docs/          # Technical Documentation
 ├── linuxcnc/      # LinuxCNC configurations
 ├── schematics/    # Wiring diagrams
 ├── scripts/       # Example control scripts
-├── gcode/         # G-code example
-└── documents/     # Hardware datasheets and manuals
+└── gcode/         # G-code example
 ```
 
 ## License
 
-This project is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0), except for files in the `documents/` directory. The Files in the `documents/` directory are datasheets and manuals from different manufacturers and retain their original copyright, these are included for reference only.
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+<img alt="Creative Commons License badge" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"/>
+</a>
+
+[LinuxCNC Motor Control Testbed](https://github.com/GTEC-UDC/linuxcnc_testbed) © 2025 by [Tomás Domínguez Bolaño](https://orcid.org/0000-0001-7470-0315), [Valentín Barral Vales](https://orcid.org/0000-0001-8750-7960), [Carlos José Escudero Cascón](https://orcid.org/0000-0002-3877-1332), and [José Antonio García Naya](https://orcid.org/0000-0002-1944-4678) (CITIC Research Center, University of A Coruña, Spain) is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0). To view a copy of this license, see the [LICENSE](LICENSE) file or visit <https://creativecommons.org/licenses/by-sa/4.0/>.
+
+## Acknowledgements
+
+This work has been supported by project TED2021-130240B-I00 (IVRY) funded by MCIN/AEI/10.13039/501100011033 and the European Union NextGenerationEU/PRTR.
+
+<div align="center">
+  <img alt="Acknowledgements logos" src="assets/ack_logos.svg" width="600"/>
+</div>
