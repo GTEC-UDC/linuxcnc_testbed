@@ -32,15 +32,15 @@ This system was used to to develop and validate the control system for [a large 
 
 The following documentation is provided in this repository:
 
-- **Technical Documentation**: [Sphinx](https://www.sphinx-doc.org) documentation sources in [/docs](docs/). To build the documentation execute the following commands:
+- **Technical Documentation**: [Sphinx](https://www.sphinx-doc.org) documentation sources in [/docs](docs/). You can build the HTML version of the documentation with the following commands:
 
   ```bash
   cd docs
-  pip install -r requirements.txt
+  uv venv && uv sync && source .venv/bin/activate
   make html
   ```
 
-  > [!NOTE]  
+  > [!NOTE]
   > Currently the technical documentation is only provided in Spanish.
 
 - **Electrical Schematics**: [KiCAD](https://www.kicad.org/) electrical schematics in [/schematics](schematics/).
