@@ -25,7 +25,7 @@ lexers["hal"] = HALLexer()
 
 project = "LinuxCNC Motor Control Testbed"
 author = "Tomás Domínguez Bolaño, Valentín Barral Vales, Carlos José Escudero Cascón, and José Antonio García Naya (CITIC Research Center, University of A Coruña, Spain)"
-copyright = "2025, Group of Electronic Technology and Communications of the University of A Coruña (UDC)"
+copyright = "2025, Tomás Domínguez Bolaño, Valentín Barral Vales, Carlos José Escudero Cascón, and José Antonio García Naya (CITIC Research Center, University of A Coruña, Spain)"
 
 
 # -- General configuration ---------------------------------------------------
