@@ -24,8 +24,8 @@ lexers["hal"] = HALLexer()
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "LinuxCNC Motor Control Testbed"
-author = "Tomás Domínguez Bolaño, Valentín Barral Vales, Carlos José Escudero Cascón, and José Antonio García Naya (CITIC Research Center, University of A Coruña, Spain)"
-copyright = "2025, Tomás Domínguez Bolaño, Valentín Barral Vales, Carlos José Escudero Cascón, and José Antonio García Naya (CITIC Research Center, University of A Coruña, Spain)"
+author = "Tomás Domínguez Bolaño, Valentín Barral Vales, Carlos José Escudero Cascón, and José Antonio García Naya"
+copyright = "%Y, Tomás Domínguez Bolaño, Valentín Barral Vales, Carlos José Escudero Cascón, and José Antonio García Naya (CITIC Research Center, University of A Coruña, Spain)"
 
 
 # -- General configuration ---------------------------------------------------

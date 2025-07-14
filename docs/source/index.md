@@ -11,7 +11,7 @@ This system was used to to develop and validate the control system for [a large 
 This work has been supported by project TED2021-130240B-I00 (IVRY) funded by MCIN/AEI/10.13039/501100011033 and the European Union NextGenerationEU/PRTR.
 
 :::{ext-image} images/logos/ack_logos.*
-:width-html: 600px
+:width-html: 700px
 :name: fig:ack_logos
 :::
 
