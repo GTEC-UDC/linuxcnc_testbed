@@ -17,15 +17,15 @@ from hal_lexer import HALLexer
 
 
 # register hal lexer
-lexers['hal'] = HALLexer()
+lexers["hal"] = HALLexer()
 
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "Robot Grúa del CITIC"
-copyright = "2025, GTEC"
-author = "GTEC"
+project = "LinuxCNC Motor Control Testbed"
+author = "Tomás Domínguez Bolaño, Valentín Barral Vales, Carlos José Escudero Cascón, and José Antonio García Naya (CITIC Research Center, University of A Coruña, Spain)"
+copyright = "2025, Group of Electronic Technology and Communications of the University of A Coruña (UDC)"
 
 
 # -- General configuration ---------------------------------------------------
@@ -35,7 +35,7 @@ extensions = [
     "sphinxcontrib.bibtex",  # https://github.com/mcmtroffaes/sphinxcontrib-bibtex
     "sphinx_copybutton",  # https://github.com/executablebooks/sphinx-copybutton
     "extimage",  # Provides ext-image and ext-figure directives
-    'myst_parser',  # https://myst-parser.readthedocs.io/en/latest/
+    "myst_parser",  # https://myst-parser.readthedocs.io/en/latest/
 ]
 
 bibtex_bibfiles = ["bib/references.bib"]
@@ -56,9 +56,7 @@ myst_enable_extensions = [
     "substitution",
 ]
 
-myst_substitutions = {
-  "project": project
-}
+myst_substitutions = {"project": project}
 
 numfig = True
 numfig_secnum_depth = 0
@@ -66,7 +64,7 @@ math_numfig = True
 highlight_language = "none"
 
 numfig_format = {
-    'code-block': 'Código %s',
+    "code-block": "Código %s",
     # 'figure': 'Figura %s',
     # 'section': 'Sección',
     # 'table': 'Tabla %s',
@@ -118,7 +116,7 @@ language = "es"
 
 html_theme = "furo"
 
-html_title = "Documentación del " + project
+html_title = project
 
 html_theme_options = {
     # furo theme options
@@ -140,7 +138,7 @@ html_css_files = [
     "css/custom.css",
     # "css/furo_custom.css",
     # "css/sphynx_copybutton.css",
-    "css/tables.css"
+    "css/tables.css",
 ]
 
 html_logo = "images/logos/logo_udc_gtec_citic.svg"
@@ -158,6 +156,15 @@ latex_table_style = ["booktabs"]
 
 latex_logo = "images/logos/logo_udc_gtec_citic.pdf"
 
+latex_documents = [
+    (
+        "index",
+        "linuxcncmotorcontroltestbed.tex",
+        project,
+        "Tomás Domínguez Bolaño \\and Valentín Barral Vales \\and Carlos José Escudero Cascón \\and José Antonio García Naya",
+        "manual",
+    )
+]
 
 # Additional documents to include
 latex_additional_files = [
@@ -213,7 +220,9 @@ latex_elements = {
         """
     ),
     "pointsize": "11pt",
-    "preamble": r"\input{preamble.sty}",
+    "preamble": r"\input{preamble.sty}"
+    + "\n"
+    + r"\authoraddress{CITIC Research Center, University of A Coruña, Spain}",
     "sphinxsetup": textwrap.dedent(
         r"""
         hmargin=115pt,
