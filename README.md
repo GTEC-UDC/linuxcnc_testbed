@@ -7,6 +7,7 @@ This system was used to to develop and validate the control system for [a large 
 <div align="center">
   
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-limegreen.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![License: GNU FDL 1.3](https://img.shields.io/badge/License-GNU%20FDL%201.3-limegreen.svg)](https://www.gnu.org/licenses/fdl-1.3.en.html)
 [![Documentation](https://img.shields.io/badge/docs-sphinx-blue.svg)](docs/)
 
 </div>
@@ -79,11 +80,24 @@ linuxcnc-testbed/
 
 ## License
 
+### General License (unless otherwise specified)
+
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
 <img alt="Creative Commons License badge" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"/>
 </a>
 
-[LinuxCNC Motor Control Testbed](https://github.com/GTEC-UDC/linuxcnc_testbed) © 2025 by [Tomás Domínguez Bolaño](https://orcid.org/0000-0001-7470-0315), [Valentín Barral Vales](https://orcid.org/0000-0001-8750-7960), [Carlos José Escudero Cascón](https://orcid.org/0000-0002-3877-1332), and [José Antonio García Naya](https://orcid.org/0000-0002-1944-4678) (CITIC Research Center, University of A Coruña, Spain) is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0). To view a copy of this license, see the [LICENSE](LICENSE) file or visit <https://creativecommons.org/licenses/by-sa/4.0/>.
+[LinuxCNC Motor Control Testbed](https://github.com/GTEC-UDC/linuxcnc_testbed) © 2025 by [Tomás Domínguez Bolaño](https://orcid.org/0000-0001-7470-0315), [Valentín Barral Vales](https://orcid.org/0000-0001-8750-7960), [Carlos José Escudero Cascón](https://orcid.org/0000-0002-3877-1332), and [José Antonio García Naya](https://orcid.org/0000-0002-1944-4678) (CITIC Research Center, University of A Coruña, Spain) is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0). To view a copy of this license, see the [LICENSE-CC](LICENSE-CC) file or visit <https://creativecommons.org/licenses/by-sa/4.0/>.
+
+### Documentation License ([docs/](docs/))
+
+Copyright © 2000-2022 LinuxCNC.org\
+Copyright © 2025 Tomás Domínguez Bolaño, Valentín Barral Vales, Carlos José Escudero Cascón, and José Antonio García Naya.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license is included in the section entitled "GNU Free Documentation License".
 
 ## Acknowledgements
 
