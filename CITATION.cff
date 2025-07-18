@@ -23,7 +23,7 @@ authors:
     family-names: García-Naya
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.15912778
+    value: https://doi.org/10.5281/zenodo.15911192
     description: >-
       The DOI of the work.
 repository-code: 'https://github.com/GTEC-UDC/linuxcnc_testbed'
@@ -35,7 +35,7 @@ abstract: >
 
   This system was used to to develop and validate the
   control system for a large high-precision 3-axis gantry
-  robot system (https://doi.org/10.5281/zenodo.15914351).
+  robot system (https://doi.org/10.5281/zenodo.15914350).
 
   This work has been supported by grant PID2022-137099NB-C42
   (MADDIE) and by project TED2021-130240B-I00 (IVRY) funded
