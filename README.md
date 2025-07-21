@@ -5,7 +5,7 @@ A motor control testbed using the open-source [LinuxCNC](https://www.linuxcnc.or
 This system was used to develop and validate the control system for [a large high-precision 3-axis gantry robot system](https://github.com/GTEC-UDC/linuxcnc_gantry_robot).
 
 <div align="center">
-  
+
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-limegreen.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![License: GNU FDL 1.3](https://img.shields.io/badge/License-GNU%20FDL%201.3-limegreen.svg)](https://www.gnu.org/licenses/fdl-1.3.en.html)
 [![Documentation](https://img.shields.io/badge/docs-sphinx-blue.svg)](docs/)
@@ -31,18 +31,24 @@ This system was used to develop and validate the control system for [a large hig
 
 ## Documentation
 
-> [!NOTE]
-> Currently the technical documentation is only provided in Spanish. English translation is planned for future releases.
+- **Technical Documentation**: [Sphinx](https://www.sphinx-doc.org) documentation sources of the system documentation in [docs/](docs/). The documentation has been prepared to be built in HTML and PDF formats. To build the documentation follow the instructions below:
 
-The following documentation is provided in this repository:
+  1. **Prepare the environment**:
 
-- **Technical Documentation**: [Sphinx](https://www.sphinx-doc.org) documentation sources of the system documentation in [docs/](docs/). You can build the HTML version of the documentation with the following commands:
+     ```bash
+     cd docs
+     uv venv && uv sync && source .venv/bin/activate
+     ```
 
-  ```bash
-  cd docs
-  uv venv && uv sync && source .venv/bin/activate
-  make html
-  ```
+  2. **Build the documentation**:
+
+     - HTML: `make html`
+
+       The HTML documentation index file will be saved in `docs/build/html/index.html`.
+
+     - PDF (requires a LaTeX installation with LuaLaTeX): `make latexpdf`
+
+       The PDF file will be saved in `docs/build/latex/linuxcnc_motor_control_testbed.pdf`.
 
 - **Electrical Schematics**: [KiCAD](https://www.kicad.org/) electrical schematics in [schematics/](schematics/).
 
