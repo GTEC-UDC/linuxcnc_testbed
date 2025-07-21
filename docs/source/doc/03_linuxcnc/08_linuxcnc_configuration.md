@@ -47,7 +47,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
-    :lines: 15-65
+    :lines: 14-64
     :lineno-match:
     :::
 
@@ -55,7 +55,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
-    :lines: 68-75
+    :lines: 67-74
     :lineno-match:
     :::
 
@@ -63,7 +63,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
-    :lines: 78-85
+    :lines: 77-84
     :lineno-match:
     :::
 
@@ -71,7 +71,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
-    :lines: 88-101
+    :lines: 87-100
     :lineno-match:
     :::
 
@@ -79,7 +79,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
-    :lines: 104-118
+    :lines: 103-117
     :lineno-match:
     :::
 
@@ -87,7 +87,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
-    :lines: 121-127
+    :lines: 120-126
     :lineno-match:
     :::
 
@@ -95,7 +95,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
-    :lines: 130-138
+    :lines: 129-137
     :lineno-match:
     :::
 
@@ -103,7 +103,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
-    :lines: 141-145
+    :lines: 140-144
     :lineno-match:
     :::
 
@@ -111,7 +111,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
-    :lines: 148-165
+    :lines: 147-164
     :lineno-match:
     :::
 
@@ -119,7 +119,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
-    :lines: 168-175
+    :lines: 167-174
     :lineno-match:
     :::
 
@@ -131,7 +131,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
-    :lines: 178-191
+    :lines: 177-190
     :lineno-match:
     :::
 
@@ -151,7 +151,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
-    :lines: 194-300
+    :lines: 193-299
     :lineno-match:
     :::
 
@@ -159,7 +159,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
-    :lines: 319-410
+    :lines: 318-409
     :lineno-match:
     :::
 
