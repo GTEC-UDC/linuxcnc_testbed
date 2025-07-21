@@ -33,7 +33,7 @@ abstract: >
   7I77 interface cards and the igus® dryve D1 motor
   controllers.
 
-  This system was used to to develop and validate the
+  This system was used to develop and validate the
   control system for a large high-precision 3-axis gantry
   robot system (https://doi.org/10.5281/zenodo.15914350).
 

@@ -2,7 +2,7 @@
 
 A motor control testbed using the open-source [LinuxCNC](https://www.linuxcnc.org) platform integrated with the [Mesa Electronics](https://store.mesanet.com/) 7i96S and 7I77 interface cards and the [igus® dryve D1](https://www.igus.eu/product/D1) motor controllers.
 
-This system was used to to develop and validate the control system for [a large high-precision 3-axis gantry robot system](https://github.com/GTEC-UDC/linuxcnc_gantry_robot).
+This system was used to develop and validate the control system for [a large high-precision 3-axis gantry robot system](https://github.com/GTEC-UDC/linuxcnc_gantry_robot).
 
 <div align="center">
   
