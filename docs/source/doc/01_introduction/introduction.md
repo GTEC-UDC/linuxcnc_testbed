@@ -27,9 +27,9 @@ Detailed information on LinuxCNC’s operation and configuration can be found in
 Testbed setup.
 :::
 
-- **Aim-TTI EL302RD Dual Power Supply**: Provides two independent power outputs, each capable of delivering a maximum of 30 V and 2 A. For the testbed setup, we required 24 V and 5 V power.
+- **[Aim-TTI EL302RD](https://www.aimtti.com/product-category/dc-power-supplies/aim-el-rseries) Dual Power Supply**: Provides two independent power outputs, each capable of delivering a maximum of 30 V and 2 A. For the testbed setup, we required 24 V and 5 V power.
 
-- **Two igus® dryve D1 Motor Controllers** [igus® dryve D1](https://www.igus.eu/product/D1): igus® dryve D1 can be used for controlling stepper, DC, and brushless motors in industrial and automation applications. The igus® dryve D1 supports the following communication methods with control systems:
+- **Two [igus® dryve D1](https://www.igus.eu/product/D1) Motor Controllers**: igus® dryve D1 can be used for controlling stepper, DC, and brushless motors in industrial and automation applications. The igus® dryve D1 supports the following communication methods with control systems:
 
   - **CANopen**: A communication protocol widely used in industrial automation systems, built upon the CAN bus (ISO 11898) standard.
   - **Modbus TCP**: A communication protocol extensively employed in industrial applications for data transmission over Ethernet networks using the TCP protocol.
@@ -37,12 +37,12 @@ Testbed setup.
 
     In this system, we communicate with the igus® dryve D1 controllers using MESA 7I96S and 7I77 boards using digital and analog signals. This setup enables LinuxCNC to have precise, real-time control over the motors' operation.
 
-- **MESA 7I96S Board**: This board is the primary hardware interface between LinuxCNC and the igus® dryve D1 controllers. It connects to the computer running LinuxCNC via an Ethernet connection. Its main functions include:
+- **[MESA 7I96S](https://store.mesanet.com/index.php?route=product/product&product_id=374) Board**: This board is the primary hardware interface between LinuxCNC and the igus® dryve D1 controllers. It connects to the computer running LinuxCNC via an Ethernet connection. Its main functions include:
 
   - Controlling the stepper motor by sending step and direction signals to its designated igus® dryve D1 controller.
   - Receiving input signals from limit switches.
 
-- **MESA 7I77 Daughter Board**: This board connects to the 7I96S board via a 25-pin flat cable. Its primary functions are:
+- **[MESA 7I77](https://store.mesanet.com/index.php?route=product/product&product_id=120) Daughter Board**: This board connects to the 7I96S board via a 25-pin flat cable. Its primary functions are:
 
   - Controlling the brushless motor by sending an analog speed signal to its corresponding igus® dryve D1 controller.
   - Receiving position feedback signals from motor encoders.
