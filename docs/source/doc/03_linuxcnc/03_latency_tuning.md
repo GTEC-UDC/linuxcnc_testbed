@@ -2,7 +2,7 @@
 
 The maximum system latency can depend on various factors such as hardware, firmware configuration, system load, and hardware interrupt handling. If the maximum system latency is too high, adjustments to the system configuration will be necessary to reduce it. Various sources, including official documentation, guides, and talks, provide detailed guidelines for optimizing the performance of real-time Linux systems {cite}`redhat_rt_low_latency,ubuntu_rt_tuning,lfoss2022tips,elc2023preparing`. The LinuxCNC user manual {cite}`linuxcncdoc` also suggests several potential adjustments to reduce latency, which are detailed in the following sections.
 
-For our test setup, we used a Lenovo T430s laptop equipped with an Intel Core i5-3320M CPU and running Debian 12. Additionally, we only considered the use of a slow thread with a 1 ms period. In this case, the latency values obtained, as shown in Figures {numref}`%s <fig:linuxcnc_latency_plot>`, {numref}`%s <fig:linuxcnc_latency_test>`, and {numref}`%s <fig:linuxcnc_latency_histogram>`, were sufficiently low without requiring any further modifications. However, note that for other hardware, even with the same operating system, the latency values could be higher. If the system latency becomes too high during LinuxCNC operation, a warning similar to {numref}`fig:linuxcnc_gui_axis_delay_warning` would appear.
+For our testbed setup, we used a Lenovo T430s laptop equipped with an Intel Core i5-3320M CPU and running Debian 12. Additionally, we only considered the use of a slow thread with a 1 ms period. In this case, the latency values obtained, as shown in Figures {numref}`%s <fig:linuxcnc_latency_plot>`, {numref}`%s <fig:linuxcnc_latency_test>`, and {numref}`%s <fig:linuxcnc_latency_histogram>`, were sufficiently low without requiring any further modifications. However, note that for other hardware, even with the same operating system, the latency values could be higher. If the system latency becomes too high during LinuxCNC operation, a warning similar to {numref}`fig:linuxcnc_gui_axis_delay_warning` would appear.
 
 :::{figure} images/linuxcnc/linuxcnc_gui_axis_delay_warning.png
 :name: fig:linuxcnc_gui_axis_delay_warning
@@ -12,14 +12,14 @@ LinuxCNC warning for unexpected latency values.
 
 ## Firmware Settings
 
-System firmware such as the BIOS or UEFI, can significantly impact system latency. This impact varies depending on the hardware manufacturer and the quality of the provided firmware. Firmware is responsible for initializing and configuring system hardware before the operating system loads. If the firmware is not properly configured to provide accurate timing or does not adequately manage interrupts and hardware devices, it can contribute to increased system latency.
+System firmware such as the {{BIOS}} or {{UEFI}}, can significantly impact system latency. This impact varies depending on the hardware manufacturer and the quality of the provided firmware. Firmware is responsible for initializing and configuring system hardware before the operating system loads. If the firmware is not properly configured to provide accurate timing or does not adequately manage interrupts and hardware devices, it can contribute to increased system latency.
 
 The firmware settings recommended in the LinuxCNC user manual {cite}`linuxcncdoc` that can help reduce latency include the following:
 
-- Disable APM, ACPI, and other power-saving functions, including all suspension related features and CPU frequency scaling.
+- Disable {{APM}}, {{ACPI}}, and other power-saving functions, including all suspension related features and CPU frequency scaling.
 - Disable CPU "turbo" mode.
 - Disable CPU simultaneous multithreading technology, e.g., Intel's Hyper-Threading technology.
-- Disable or limit System Management Interrupts (SMIs).
+- Disable or limit SMIs (System Management Interrupts).
 - Disable unused hardware.
 
 ## Linux Settings
@@ -37,9 +37,9 @@ For latency optimization, the most relevant parameters, as suggested in the Linu
 
 - `isolcpus`: A list of CPUs that will be isolated from balancing and scheduling algorithms. This prevents most system processes from using the specified CPUs, thereby making more CPU time available for LinuxCNC.
 - `irqaffinity`: A list of CPUs to set as the default IRQ affinity mask. This selects the CPUs that will handle interrupts, ensuring that the remaining CPUs do not have to perform this task.
-- `rcu_nocbs`: A list of CPUs whose RCU callbacks will be executed on other CPUs.{cite}`enwiki:1169786538,redhat_rt_rcu`.
-- `rcu_nocb_poll`: This option periodically wakes up RCU callback execution threads using a timer to check for callbacks to execute. Without this option, the CPUs specified in `rcu_nocbs` are responsible for waking up the threads that execute RCU callbacks {cite}`redhat_rt_rcu`. This option improves the real-time responsiveness of the CPUs listed in `rcu_nocbs` by freeing them from the need to wake up their corresponding threads.
-- `nohz_full`: A list of CPUs that will cease receiving timing ticks when only one task is executing. As a result, these CPUs can dedicate more time to executing applications and less time to handling interrupts and context switching. The CPUs in this list will have their RCU callbacks transferred to other CPUs, as if they had been specified with the `rcu_nocbs` option.
+- `rcu_nocbs`: A list of CPUs whose {{RCU}} callbacks will be executed on other CPUs.{cite}`enwiki:1169786538,redhat_rt_rcu`.
+- `rcu_nocb_poll`: This option periodically wakes up {{RCU}} callback execution threads using a timer to check for callbacks to execute. Without this option, the CPUs specified in `rcu_nocbs` are responsible for waking up the threads that execute {{RCU}} callbacks {cite}`redhat_rt_rcu`. This option improves the real-time responsiveness of the CPUs listed in `rcu_nocbs` by freeing them from the need to wake up their corresponding threads.
+- `nohz_full`: A list of CPUs that will cease receiving timing ticks when only one task is executing. As a result, these CPUs can dedicate more time to executing applications and less time to handling interrupts and context switching. The CPUs in this list will have their {{RCU}} callbacks transferred to other CPUs, as if they had been specified with the `rcu_nocbs` option.
 
 To determine the number of processors in your system, you can use either the `nproc` command or `cat /proc/cpuinfo`. For instance, in a system with 4 CPUs, if you wish to isolate 3 CPUs from disturbances, you can use the following parameters:
 

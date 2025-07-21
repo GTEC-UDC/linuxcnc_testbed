@@ -31,7 +31,7 @@ The oscilloscope allows for the simultaneous observation of four channels over a
 Closed-loop control of position, speed, and current.
 :::
 
-The Igus dryve D1 controller manual does not explicitly describe the control system it implements. We assume that it employs a closed-loop control system with "minor loop feedback compensation" {cite}`enwiki:1032838404,nise2015control,golnaraghi2017automatic`. In this system, the motor's position, speed, and current are used as feedback signals to precisely and dynamically adjust its position. This control system architecture is commonly used in motor control applications. Its structure, considering the P and I parameters defined by the Igus dryve D1 controller, is shown in {numref}`fig:motor_control`, where:
+The igus® dryve D1 controller manual does not explicitly describe the control system it implements. We assume that it employs a closed-loop control system with "minor loop feedback compensation" {cite}`enwiki:1032838404,nise2015control,golnaraghi2017automatic`. In this system, the motor's position, speed, and current are used as feedback signals to precisely and dynamically adjust its position. This control system architecture is commonly used in motor control applications. Its structure, considering the {{P}} and {{I}} parameters defined by the igus® dryve D1 controller, is shown in {numref}`fig:motor_control`, where:
 
 - $R(t)$ is the requested position for the motor at time $t$.
 
@@ -61,9 +61,9 @@ The Igus dryve D1 controller manual does not explicitly describe the control sys
 
     $$x(t) * I(\beta)(t) = \beta \int_{-\infty}^t x(\tau) d\tau$$
 
-The "Oscilloscope" page provides access to the configuration of the PI controllers' control parameters. These parameters allow for optimizing motor performance to meet the specific requirements of each task. For Igus motors, by selecting the corresponding motor model in the motor configuration section (see {numref}`sec:motor_motor`), the control parameters will be set to the default values for the chosen motor. In applications involving high speeds, heavy loads, or when noise reduction is critical, fine adjustments to the control parameter configuration may be necessary.
+The "Oscilloscope" page provides access to the configuration of the {{PI}} controllers parameters. These parameters allow for optimizing motor performance to meet the specific requirements of each task. For igus® motors, by selecting the corresponding motor model in the motor configuration section (see {numref}`sec:motor_motor`), the control parameters will be set to the default values for the chosen motor. In applications involving high speeds, heavy loads, or when noise reduction is critical, fine adjustments to the control parameter configuration may be necessary.
 
-In our test setup, we have configured the following parameters for both motors, which have worked well:
+In our testbed setup, we have configured the following parameters for both motors, which have worked well:
 
 - **Current**
   - **Amplification (P)**: 20
@@ -75,9 +75,9 @@ In our test setup, we have configured the following parameters for both motors, 
   - **Amplification (P)**: 1000
 
 :::{note}
-When configuring the motor control parameters, it is important to consider the following points:
+When configuring the motor control parameters in the "Oscilloscope" page, it is important to consider the following points:
 
 - Parameters become effective upon pressing "enter" or unfocusing the corresponding parameter input field.
-- Parameters require very fine adjustment; an abrupt change in a parameter can cause the corresponding PI controller to become unstable and result in sudden motor movement. In such a case, if the movement limit parameters have been adequately configured (see {numref}`sec:axis_motion_limits`), the controller should stop the motor and report a tracking error.
-- Setting some parameters to excessively high values could lead to unwanted vibrations and noise in the motors due to oscillations in the PI controller signal. Conversely, setting some parameters to excessively low values could cause the motors to respond slowly to commands issued by the controller.
+- Parameters require very fine adjustment; an abrupt change in a parameter can cause the corresponding {{PI}} controller to become unstable and result in sudden motor movement. In such a case, if the movement limit parameters have been adequately configured (see {numref}`sec:axis_motion_limits`), the controller should stop the motor and report a tracking error.
+- Setting some parameters to excessively high values could lead to unwanted vibrations and noise in the motors due to oscillations in the {{PI}} controller signal. Conversely, setting some parameters to excessively low values could cause the motors to respond slowly to commands issued by the controller.
 :::

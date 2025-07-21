@@ -1,7 +1,7 @@
 (sec:linuxcnc_installation)=
 # Installation
 
-LinuxCNC is available for installation from the official repositories of Debian and Ubuntu distributions. For our test setup, we installed Debian 12 with the XFCE desktop environment. Once the operating system is installed, follow these steps to install LinuxCNC:
+LinuxCNC is available for installation from the official repositories of Debian and Ubuntu distributions. For our testbed setup, we installed Debian 12 with the XFCE desktop environment. Once the operating system is installed, follow these steps to install LinuxCNC:
 
 1. Update the system's package index by running the following commands:
 

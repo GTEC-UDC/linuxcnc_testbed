@@ -31,7 +31,7 @@ For the brushless motor, we select the "binary" control mode. {numref}`fig:conf_
 "Drive Profile" configuration page of the brushless motor controller, using the "binary" control mode.
 :::
 
-In our test setup, we have configured the following parameters for the movement at position 1:
+In our testbed setup, we have configured the following parameters for the movement at position 1:
 
 - **Mode**: ADR (Analogue Rotation with Direction Definition).
 - **Goal (°)**: This field will be left empty.
@@ -53,6 +53,6 @@ While option 1 may be suitable for testing, implementing option 2 is necessary f
 1. Set digital inputs 1 to 5 (X2.1 to X2.5) with the selected movement number minus one, where input 1 represents the least significant bit and input 5 the most significant. For example, for movement number 1, the inputs will be set to 00000; for 2, to 00001; and so on, up to 32, which will be set to 11111. For movement number 1, which is our case, digital inputs 1 to 5 can simply be left disconnected.
 2. Set digital input 7 (X2.7, the "enable" input) to a high level.
 3. Once the "enable" input is activated, wait for the controller to set digital output 1 (X3.1, the "ready" output) to a high level. This output indicates that the controller is prepared to accept position commands.
-4. Once the "ready" output is activated, send a square pulse to digital input 6 (X2.6, the "start" signal) to initialize the movement program. The controller has a debounce filter with a time of 10 ms on digital inputs 1 to 10 (excluding step and direction inputs), so the pulse must have a duration greater than 10 ms for the controller to detect it. In our test setup, we have set the pulse duration to 100 ms.
+4. Once the "ready" output is activated, send a square pulse to digital input 6 (X2.6, the "start" signal) to initialize the movement program. The controller has a debounce filter with a time of 10 ms on digital inputs 1 to 10 (excluding step and direction inputs), so the pulse must have a duration greater than 10 ms for the controller to detect it. In our testbed setup, we have set the pulse duration to 100 ms.
 
-In our test setup, the movement activation process has been configured in LinuxCNC and is executed using the MESA 7I77 board, which sends and receives the corresponding signals.
+In our testbed setup, the movement activation process has been configured in LinuxCNC and is executed using the MESA 7I77 board, which sends and receives the corresponding signals.

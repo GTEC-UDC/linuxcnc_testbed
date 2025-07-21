@@ -13,7 +13,7 @@ The "Communication" configuration page, shown in {numref}`fig:conf_stepper_4`, a
 
 This section allows for configuring TCP/IP connection parameters: IP address, subnet mask, gateway, and hostname. After setting these parameters, you must click the "Reload" button to apply the changes.
 
-In our test setup, these parameters were manually configured to the values shown in {numref}`tab:conf_ethernet`. The controllers were connected to a laptop PC via a switch. The parameters were configured to enable connectivity to the laboratory network, although this connection was not ultimately established.
+In our testbed setup, these parameters were manually configured to the values shown in {numref}`tab:conf_ethernet`. The controllers were connected to a laptop PC via a switch. The parameters were configured to enable connectivity to the laboratory network, although this connection was not ultimately established.
 
 :::{csv-table} Ethernet configuration parameters.
 :name: tab:conf_ethernet
@@ -30,7 +30,7 @@ Hostname,    igus-dryve-D1-098a, igus-dryve-D1-098e
 
 This section allows you to select whether communication with the dryve D1 controller's web server should be via an unencrypted HTTP connection or an encrypted HTTPS connection. For an HTTPS connection, an external certificate can be provided, or a self-signed certificate can be generated.
 
-In our test setup, the option to use an unencrypted HTTP connection was selected.
+In our testbed setup, the option to use an unencrypted HTTP connection was selected.
 
 ## Bus Systems
 

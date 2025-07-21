@@ -14,7 +14,7 @@ Initial configuration page of the stepper motor controller.
 :::
 
 :::{note}
-We have configured the Movement type option as "Rotary," despite the motor driving a linear axis. This is because we do not require the controller to control the axis position, LinuxCNC will handle this. Our only requirement is for the controller to respond to the movement signals we transmit. This setting can also simplify the configuration of motor movement parameters on the "Axis" pages (see {numref}`sec:page_drive_profile`).
+We have configured the Movement type option as "Rotary," despite the motor driving a linear axis. This is because we do not require the controller to control the axis position, LinuxCNC will handle this. Our only requirement is for the controller to respond to the movement signals we transmit.
 :::
 
 Additionally, this page includes the following sections:

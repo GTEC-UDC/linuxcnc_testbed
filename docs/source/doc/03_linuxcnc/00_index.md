@@ -3,7 +3,7 @@
 
 :::{toctree}
 :maxdepth: 2
-:caption: Index
+:caption: Table of Contents
 
 01_installation.md
 02_latency_analysis.md
@@ -15,7 +15,7 @@
 08_linuxcnc_configuration.md
 :::
 
-LinuxCNC (<https://linuxcnc.org/>), formerly known as EMC, is a free and open-source Linux numerical control system for operating CNC machines using general-purpose computers.
+LinuxCNC (<https://linuxcnc.org/>), formerly known as the {{EMC}}, is a free and open-source Linux numerical control system for operating {{CNC}} machines using general-purpose computers.
 
 This section provides a brief guide to using and configuring LinuxCNC for the testbed system. For more in-depth information, consult the LinuxCNC user manual {cite}`linuxcncdoc`. Other valuable LinuxCNC resources are:
 
@@ -25,7 +25,7 @@ This section provides a brief guide to using and configuring LinuxCNC for the te
 - Videos by "The Feral Engineer" on YouTube:
   - LinuxCNC bare bones:
         <https://www.youtube.com/playlist?list=PLTYvfbjLClpflFA3C8ZJ5H30vnReQXRii>
-  - LinuxCNC Basic HAL tutorials:
+  - LinuxCNC Basic {{HAL}} tutorials:
         <https://www.youtube.com/playlist?list=PLTYvfbjLClpfpy3xu1bx3kndiktXZVwyg>
   - Classicladder tutorials:
         <https://www.youtube.com/playlist?list=PLTYvfbjLClpfAfJSGhZUecgXFwVPY5e09>

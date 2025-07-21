@@ -57,7 +57,7 @@ Up, Down, Obtained via BOOTP
 Up, Up, 192.168.1.121 and use fallback conf.
 :::
 
-In our test setup, jumpers `W4` and `W5` have been set to the (down, up) position, as shown in {numref}`fig:mesa_ip_selection`. This configuration allows the board to read the IP address stored in the EEPROM. For this setup, we have configured the board's IP address to 10.68.33.122.
+In our testbed setup, jumpers `W4` and `W5` have been set to the (down, up) position, as shown in {numref}`fig:mesa_ip_selection`. This configuration allows the board to read the IP address stored in the EEPROM. For this setup, we have configured the board's IP address to 10.68.33.122.
 
 (sec:mesa7i96s_fallback)=
 ## Fallback Configuration
@@ -74,4 +74,4 @@ The MESA 7I96S board has the capability to supply 5V power to the board connecte
 - When jumper `W6` is in the up position, the MESA 7I96S board will provide power to the MESA 7I77 board through the expansion connector.
 - When jumper `W6` is in the down position, the MESA 7I96S board will not provide power through the expansion connector; in this case, external power must be supplied to the MESA 7I77 board.
 
-In our test setup, the latter option was chosen, with jumper `W6` configured in the down position, as seen in {numref}`fig:mesa_ip_selection`. The MESA 7I77 board must also be configured appropriately, as explained in {numref}`sec:mesa7i77_power`.
+In our testbed setup, the latter option was chosen, with jumper `W6` configured in the down position, as seen in {numref}`fig:mesa_ip_selection`. The MESA 7I77 board must also be configured appropriately, as explained in {numref}`sec:mesa7i77_power`.

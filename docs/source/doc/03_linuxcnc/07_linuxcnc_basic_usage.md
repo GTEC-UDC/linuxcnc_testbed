@@ -44,7 +44,7 @@ LinuxCNC "AXIS" graphical interface in "ON" state.
 
 Once LinuxCNC is in the "ON" state, you can manually control the machine using the {guilabel}`-` and {guilabel}`+` controls on the "Manual Control" tab. However, to execute specific G-code positioning commands (e.g., moving the machine to X=1, Y=5), it is necessary to perform the homing process. The homing procedure involves establishing a precise reference point for all machine axes, providing LinuxCNC with exact knowledge of the machine's current position.
 
-To perform the homing process, you can click the {guilabel}`Home All` button on the "Manual Control" tab or select the menu entry {menuselection}`Machine --> Homing --> Home all axes`. In the test configurations, the homing process uses a single limit switch per motor. The procedure LinuxCNC follows for homing with limit switches is as follows:
+To perform the homing process, you can click the {guilabel}`Home All` button on the "Manual Control" tab or select the menu entry {menuselection}`Machine --> Homing --> Home all axes`. In the testbed configurations, the homing process uses a single limit switch per motor. The procedure LinuxCNC follows for homing with limit switches is as follows:
 
 1. Move the motor towards the limit switch until it is activated.
 2. Move the motor in the opposite direction until the limit switch is deactivated.

@@ -38,29 +38,29 @@ This section includes the following parameters:
 - **Quick-Stop (°/s{sup}`2`)**: This specifies the deceleration rate when a movement stops in an emergency. A quick stop is executed if the controller's "Enable" signal (digital input X2.7) is revoked.
 
     :::{important}
-    It is crucial to ensure that the specified deceleration is appropriate for the intended application. A deceleration that is too low could result in an excessive stop time for the robot's movement; conversely, a deceleration that is too high could damage the robot's mechanical structure.
+    It is important to ensure that the specified deceleration is appropriate for the intended application. A deceleration that is too low could result in an excessive stop time for the robot's movement; conversely, a deceleration that is too high could damage the robot's mechanical structure.
     :::
 
-    In our test setup, we have set this parameter to 50000 °/s{sup}`2`.
+    In our testbed setup, we have set this parameter to 50000 °/s{sup}`2`.
 
 - **Following Error (°)**: This defines the permissible deviation of the actual position from the desired position. A warning is issued if 50% of the allowed tracking error is reached. If the allowed tracking error is exceeded, the movement stops, and an error is reported.
 
-    In our test setup, we have set this parameter to 20°.
+    In our testbed setup, we have set this parameter to 20°.
 
 - **Positioning Window (°)**: This parameter defines a position range around a target point, extending in both positive and negative directions. For example, if the goal is to reach 100 mm and a positioning window of 10 mm is set, the system will consider the position to be within the target range if it falls anywhere between 90 mm and 110 mm. If the motor's actual position is within this window, the movement is considered complete, even if the motor is mechanically blocked. This prevents the system from continuously attempting to reach an exact position in case of an obstruction. If the positioning window is set to 0, this function is deactivated, and the system will not consider a range around the target point.
 
-    In our test setup, we have set this parameter to 0, thereby deactivating this function.
+    In our testbed setup, we have set this parameter to 0, thereby deactivating this function.
 
 - **Positioning Time (ms)**: This defines the duration, in milliseconds, for which the actual position must be maintained within the range defined by the positioning window before a movement is considered complete.
 
-    In our test setup, we have set this parameter to 0.
+    In our testbed setup, we have set this parameter to 0.
 
 (sec:limit_switch)=
 ## Limit Switch 
 
 This section includes a "Position" parameter that allows for specifying the position and number of limit sensors used.
 
-In our test setup, the limit sensors are not connected to the controllers, they are only connected to the MESA 7I96S board, so limits are entirely managed by LinuxCNC. Therefore, we set the "Position" parameter to "None."
+In our testbed setup, the limit sensors are not connected to the controllers, they are only connected to the MESA 7I96S board, so limits are entirely managed by LinuxCNC. Therefore, we set the "Position" parameter to "None."
 
 ## Reference
 
@@ -74,7 +74,7 @@ Similar to robot movement limits (see {numref}`sec:limit_switch`), the "homing" 
 (sec:axis_absolute_feedback)=
 ## Absolute Feedback 
 
-The Igus dryve D1 controller has two analog inputs, AI 1 (Analog Input 1, input X4.1) and AI 2 (Analog Input 2, input X4.2). These are used to configure and control the target position or speed and the current position of the system, respectively. In our system, we will use analog input AI 1 to control the brushless motor's speed; analog input AI 2 will not be used. For the stepper motor, these inputs are not applicable, making this section relevant only for the brushless motor. Below are the parameters related to the analog inputs available in this section.
+The igus® dryve D1 controller has two analog inputs, AI 1 (Analog Input 1, input X4.1) and AI 2 (Analog Input 2, input X4.2). These are used to configure and control the target position or speed and the current position of the system, respectively. In our system, we will use analog input AI 1 to control the brushless motor's speed; analog input AI 2 will not be used. For the stepper motor, these inputs are not applicable, making this section relevant only for the brushless motor. Below are the parameters related to the analog inputs available in this section.
 
 - **Parameters related to AI 1 (input X4.1)**:
 
@@ -99,16 +99,16 @@ The Igus dryve D1 controller has two analog inputs, AI 1 (Analog Input 1, input 
     The calculation of the target position or speed is not explicitly stated in the controller manual (considering manual version 3.0.1) and has been determined experimentally. The manual only textually describes the "AI 1 Dead Band Zero Value" and "AI 1 Dead Band Input Signal" parameters, similar to the descriptions provided above.
     :::
 
-:::{figure} images/f_is/fig.*
+:::{figure} images/f_zv/fig.*
 :name: fig:deadband_zv
 
-Transfer function :math:`f_{\text{ZV}}(\cdot)`.
+Transfer function $f_{\text{ZV}}(\cdot)$.
 :::
 
 :::{figure} images/f_is/fig.*
 :name: fig:deadband_is
 
-Transfer function :math:`f_{\text{IS}}(\cdot)`.
+Transfer function $f_{\text{IS}}(\cdot)$.
 :::
 
 - **Parameters related to AI 2 (input X4.2)**:

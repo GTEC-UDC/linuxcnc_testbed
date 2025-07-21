@@ -1,7 +1,7 @@
 (sec:linuxcnc_configuration)=
 # LinuxCNC Configuration
 
-As noted in {numref}`sec:linuxcnc_intro_config`, a LinuxCNC configuration comprises several files, requiring at least one INI file and one HAL file. The following sections detail the configuration of both file types, using the `mesa_7i96s_7i77_xy` configuration as an example.
+As noted in {numref}`sec:linuxcnc_intro_config`, a LinuxCNC configuration comprises several files, requiring at least one INI file and one {{HAL}} file. The following sections detail the configuration of both file types, using the `mesa_7i96s_7i77_xy` configuration as an example.
 
 (sec:linuxcnc_configuration_ini)=
 ## INI Configuration
@@ -67,7 +67,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
     :lineno-match:
     :::
 
-- **EMCMOT Section**: Motion controller configuration. The `EMCMOT` and `SERVO_PERIOD` parameters are not directly used by LinuxCNC but are used to configure the motion control module in the HAL file (see {numref}`sec:linuxcnc_configuration_hal`).
+- **EMCMOT Section**: Motion controller configuration. The `EMCMOT` and `SERVO_PERIOD` parameters are not directly used by LinuxCNC but are used to configure the motion control module in the {{HAL}} file (see {numref}`sec:linuxcnc_configuration_hal`).
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
@@ -75,7 +75,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
     :lineno-match:
     :::
 
-- **HAL Section**: HAL configuration.
+- **{{HAL}} Section**: {{HAL}} configuration.
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
@@ -83,7 +83,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
     :lineno-match:
     :::
 
-- **HALUI Section**: HALUI (HAL-based user interface) configuration. The only available option is `MDI_COMMAND`, which allows MDI commands to be executed via HAL signals. In our case, this section is left empty.
+- **HALUI Section**: HALUI (HAL-based user interface) configuration. The only available option is `MDI_COMMAND`, which allows MDI commands to be executed via {{HAL}} signals. In our case, this section is left empty.
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
@@ -147,7 +147,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
     Both the joint and axis configurations include `MAX_VELOCITY`, `MAX_ACCELERATION`, `MIN_LIMIT`, and `MAX_LIMIT` parameters. When the robot is not homed, LinuxCNC uses the parameters from the joint sections; however, once the robot is homed, it uses the parameters from the axis sections.
     :::
 
-    The following code shows the configuration of joint 1 (X-axis), which corresponds to the stepper motor. The parameters specified below the comment "Custom configurations for the HAL file" are not directly used by LinuxCNC; they are used to configure the motor parameters in the HAL file (see {numref}`sec:linuxcnc_configuration_hal`).
+    The following code shows the configuration of joint 1 (X-axis), which corresponds to the stepper motor. The parameters specified below the comment "Custom configurations for the HAL file" are not directly used by LinuxCNC; they are used to configure the motor parameters in the {{HAL}} file (see {numref}`sec:linuxcnc_configuration_hal`).
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
@@ -155,7 +155,7 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
     :lineno-match:
     :::
 
-    The following code shows the configuration of joint 2 (Y-axis), which corresponds to the brushless motor. As before, the parameters specified below the comment "Custom configurations for the HAL file" are not directly used by LinuxCNC; they are used to configure the motor parameters in the HAL file (see {numref}`sec:linuxcnc_configuration_hal`). These parameters differ from the previous ones because now a brushless motor is used.
+    The following code shows the configuration of joint 2 (Y-axis), which corresponds to the brushless motor. As before, the parameters specified below the comment "Custom configurations for the HAL file" are not directly used by LinuxCNC; they are used to configure the motor parameters in the {{HAL}} file (see {numref}`sec:linuxcnc_configuration_hal`). These parameters differ from the previous ones because now a brushless motor is used.
 
     :::{literalinclude} codes/mesa_7i96s_7i77_xy.ini
     :language: ini
@@ -164,9 +164,9 @@ Below are the different sections of the `mesa_7i96s_7i77_xy.ini` configuration f
     :::
 
 (sec:linuxcnc_configuration_hal)=
-## HAL Configuration
+## {{HAL}} Configuration
 
-HAL is a fundamental component of LinuxCNC, serving as an interface between the machine's software and hardware. It provides the infrastructure for communication among the system's numerous software and hardware components. The HAL layer is composed of components that:
+{{HAL}} is a fundamental component of LinuxCNC, serving as an interface between the machine's software and hardware. It provides the infrastructure for communication among the system's numerous software and hardware components. The {{HAL}} layer is composed of components that:
 
 - Are interconnected, processing incoming data and providing outputs to other components (e.g., the motion planning algorithm instructs the motors on their movement).
 - Possess the ability to communicate with hardware.
@@ -174,49 +174,49 @@ HAL is a fundamental component of LinuxCNC, serving as an interface between the 
   - As real-time components, either with an execution frequency of a few microseconds (e.g., to advance a stepper motor or read an encoder) or with a frequency less than one millisecond (e.g., to adjust the planning of subsequent movements to complete a G-code instruction).
   - As non-real-time user-space components, which can be interrupted or delayed if the rest of the system is busy or overloaded.
 
-The HAL components included with LinuxCNC are listed in the user manual {cite}`linuxcncdoc`, also available at <http://linuxcnc.org/docs/stable/html/hal/components.html>. Additionally, each component has its own man page.
+The {{HAL}} components included with LinuxCNC are listed in the user manual {cite}`linuxcncdoc`, also available at <http://linuxcnc.org/docs/stable/html/hal/components.html>. Additionally, each component has its own man page.
 
 ### Basic Concepts
 
-- **Pins and Signals**: HAL is based on the same principles used to design electrical circuits and hardware systems, employing "pins" and "signals" to represent the flow of data between HAL modules or components. In summary:
+- **Pins and Signals**: {{HAL}} is based on the same principles used to design electrical circuits and hardware systems, employing "pins" and "signals" to represent the flow of data between {{HAL}} modules or components. In summary:
 
   - Pins can carry boolean, float, and signed or unsigned integer values.
   - Pins have a direction: input (IN), output (OUT), or input/output (I/O).
   - A signal identifies a connection between pins.
 
-    {numref}`fig:hal_circuit_concept` from the LinuxCNC documentation {cite}`linuxcncdoc` illustrates the concepts of components, pins, and signals in HAL. In the figure, pin `pin3-out` of `component.0` connects to pins `pin3-in` and `pin4-in` of `component.1` (via the `signal-red` signal), and pin `pin1-out` of `component.1` connects to pin `pin1-in` of `component.0` (via the `signal blue` signal).
+    {numref}`fig:hal_circuit_concept` from the LinuxCNC documentation {cite}`linuxcncdoc` illustrates the concepts of components, pins, and signals in {{HAL}}. In the figure, pin `pin3-out` of `component.0` connects to pins `pin3-in` and `pin4-in` of `component.1` (via the `signal-red` signal), and pin `pin1-out` of `component.1` connects to pin `pin1-in` of `component.0` (via the `signal blue` signal).
 
     :::{figure} images/linuxcnc/hal_circuit_concept.png
     :name: fig:hal_circuit_concept
 
-    HAL Concept --- Connection as electrical circuits. Source: LinuxCNC documentation :cite:`linuxcncdoc`.
+    {{HAL}} Concept --- Connection as electrical circuits. Source: LinuxCNC documentation {cite}`linuxcncdoc`.
     :::
 
-- **Parameters**: HAL components can have parameters, which are input or output settings not connected to any other component. There are two types of parameters:
+- **Parameters**: {{HAL}} components can have parameters, which are input or output settings not connected to any other component. There are two types of parameters:
 
   - **Input parameters**: Values that the user can adjust and that remain fixed once configured.
   - **Output parameters**: Values that cannot be adjusted by the user. They allow for internal signals to be monitored.
 
-- **Functions**: Each HAL component has one or more functions that must be executed to perform the component's task. For these functions to be executed, they must be added to a thread.
+- **Functions**: Each {{HAL}} component has one or more functions that must be executed to perform the component's task. For these functions to be executed, they must be added to a thread.
 
-- **Threads**: Threads enable HAL component functions to be executed at specific time intervals. When a thread is created, the time interval at which its assigned functions will be executed is specified. Subsequently, the functions of the HAL components can be added to the thread to be executed in order at the thread's defined time interval.
+- **Threads**: Threads enable {{HAL}} component functions to be executed at specific time intervals. When a thread is created, the time interval at which its assigned functions will be executed is specified. Subsequently, the functions of the {{HAL}} components can be added to the thread to be executed in order at the thread's defined time interval.
 
-### Interaction with HAL and Commands
+### Interaction with {{HAL}} and Commands
 
-HAL does not interact directly with the user. LinuxCNC provides various interfaces to configure or interact with HAL:
+{{HAL}} does not interact directly with the user. LinuxCNC provides various interfaces to configure or interact with {{HAL}}:
 
 - From `.hal` files.
 - From the command line using the `halcmd` command.
 - From Python scripts.
 - From C/C++ programs.
 
-Configuration or interaction with HAL using any of these interfaces is performed through commands. The complete list of commands is detailed in the `halcmd` man page, also available at <http://linuxcnc.org/docs/html/man/man1/halcmd.1.html>. The most relevant commands are:
+Configuration or interaction with {{HAL}} using any of these interfaces is performed through commands. The complete list of commands is detailed in the `halcmd` man page, also available at <http://linuxcnc.org/docs/html/man/man1/halcmd.1.html>. The most relevant commands are:
 
 :::{note}
 Generally, each command must be specified on a single line. If a command needs to be split across multiple lines, a backslash (`\`) character can be used to indicate that the line continues to the next. The backslash must be the last character before the new line.
 :::
 
-- `loadrt`: Loads a HAL real-time component into the system. The basic syntax of the `loadrt` command is:
+- `loadrt`: Loads a {{HAL}} real-time component into the system. The basic syntax of the `loadrt` command is:
 
     ```text
     loadrt <component> <options>
@@ -240,7 +240,7 @@ Generally, each command must be specified on a single line. If a command needs t
     addf mux4.0 servo-thread
     ```
 
-- `loadusr`: Loads a non-real-time HAL component into the system. Non-real-time components are separate processes that can optionally communicate with other HAL components via pins and parameters. Real-time components cannot be loaded into non-real-time space. The syntax of the `loadusr` command is:
+- `loadusr`: Loads a non-real-time {{HAL}} component into the system. Non-real-time components are separate processes that can optionally communicate with other {{HAL}} components via pins and parameters. Real-time components cannot be loaded into non-real-time space. The syntax of the `loadusr` command is:
 
     ```text
     loadusr [<flags>] <command>
@@ -283,7 +283,7 @@ Generally, each command must be specified on a single line. If a command needs t
 
        where `home-x` is the signal name, `joint.0.home-sw-in` is an input (IN) pin, `<=` is the optional direction arrow (ignored by the command), and `parport.0.pin-11-in` is an output (OUT) pin.
 
-       This example can also be equivalently defined in HAL by two `net` commands:
+       This example can also be equivalently defined in {{HAL}} by two `net` commands:
 
        ```hal
        net home-x <= parport.0.pin-11-in
@@ -291,7 +291,7 @@ Generally, each command must be specified on a single line. If a command needs t
        ```
 
        :::{note}
-       As seen in this example, although the second pin's name has the `-in` suffix, HAL treats it as an output pin. Therefore, when configuring pin connections in HAL, always refer to how the pin is configured in HAL, not just its name.
+       As seen in this example, although the second pin's name has the `-in` suffix, {{HAL}} treats it as an output pin. Therefore, when configuring pin connections in {{HAL}}, always refer to how the pin is configured in {{HAL}}, not just its name.
        :::
 
     - ```hal
@@ -300,7 +300,7 @@ Generally, each command must be specified on a single line. If a command needs t
 
       where `xStep` is the signal name, `stepgen.0.out` is an output pin, and `parport.0.pin-02-out` and `parport.0.pin-08-out` are input pins.
 
-      This example can also be defined in HAL by two `net` commands as follows:
+      This example can also be defined in {{HAL}} by two `net` commands as follows:
 
       ```hal
       net home-x <= stepgen.0.out
@@ -333,7 +333,7 @@ Generally, each command must be specified on a single line. If a command needs t
 
 ### .hal File Format
 
-A `.hal` file is a plain text file containing HAL commands. Comments can be included by starting lines with the hash symbol (`#`). Options from the `.ini` file can be accessed with the syntax `[<section>]<option>`, where `[<section>]` is the section name in square brackets and `<option>` is the corresponding option name within that section.
+A `.hal` file is a plain text file containing {{HAL}} commands. Comments can be included by starting lines with the hash symbol (`#`). Options from the `.ini` file can be accessed with the syntax `[<section>]<option>`, where `[<section>]` is the section name in square brackets and `<option>` is the corresponding option name within that section.
 
 ### Example: `mesa_7i96s_7i77_xy.hal` Configuration File
 
@@ -371,28 +371,28 @@ As noted in {numref}`sec:linuxcnc_intro_config`, a LinuxCNC configuration includ
     :lineno-match:
     :::
 
-## HAL Tools
+## {{HAL}} Tools
 
-Several HAL tools are available for real-time visualization and diagnosis of pin states. The most notable ones are described below; for a complete list of tools, consult the LinuxCNC user manual {cite}`linuxcncdoc`.
+Several {{HAL}} tools are available for real-time visualization and diagnosis of pin states. The most notable ones are described below; for a complete list of tools, consult the LinuxCNC user manual {cite}`linuxcncdoc`.
 
 ### Halcmd
 
-`halcmd` is a command-line tool for interacting with HAL. When `halcmd` is executed, the following command line will appear:
+`halcmd` is a command-line tool for interacting with {{HAL}}. When `halcmd` is executed, the following command line will appear:
 
 ```text
 halcmd:
 ```
 
-This prompt allows you to enter and execute HAL commands. Besides the commands detailed previously in {numref}`sec:linuxcnc_configuration_hal`, other commands such as `show`, `list`, or `save` can be very useful. These commands enable printing various elements defined in HAL, such as pins, parameters, threads, etc. The complete list of commands is detailed in the `halcmd` man page, also available at <http://linuxcnc.org/docs/html/man/man1/halcmd.1.html>.
+This prompt allows you to enter and execute {{HAL}} commands. Besides the commands detailed previously in {numref}`sec:linuxcnc_configuration_hal`, other commands such as `show`, `list`, or `save` can be very useful. These commands enable printing various elements defined in {{HAL}}, such as pins, parameters, threads, etc. The complete list of commands is detailed in the `halcmd` man page, also available at <http://linuxcnc.org/docs/html/man/man1/halcmd.1.html>.
 
 ### Halshow
 
-`halshow` is a graphical tool that allows viewing and monitoring HAL components such as pins, parameters, signals, and functions. This tool is shown in Figures {numref}`%s <fig:halshow_show>` and {numref}`%s <fig:halshow_watch>`. The tool has the following main elements:
+`halshow` is a graphical tool that allows viewing and monitoring {{HAL}} components such as pins, parameters, signals, and functions. This tool is shown in Figures {numref}`%s <fig:halshow_show>` and {numref}`%s <fig:halshow_watch>`. The tool has the following main elements:
 
-- A tree view displaying HAL pins, parameters, signals, functions, etc. This view is located on the left side of the window, as seen in Figures {numref}`%s <fig:halshow_show>` and {numref}`%s <fig:halshow_watch>`.
-- A text input field for executing HAL commands, located at the bottom, as shown in Figures {numref}`%s <fig:halshow_show>` and {numref}`%s <fig:halshow_watch>`.
+- A tree view displaying {{HAL}} pins, parameters, signals, functions, etc. This view is located on the left side of the window, as seen in Figures {numref}`%s <fig:halshow_show>` and {numref}`%s <fig:halshow_watch>`.
+- A text input field for executing {{HAL}} commands, located at the bottom, as shown in Figures {numref}`%s <fig:halshow_show>` and {numref}`%s <fig:halshow_watch>`.
 - A "SHOW" tab where information about the selected element in the tree view is displayed, as shown in {numref}`fig:halshow_show`.
-- A "WATCH" tab where you can monitor and set values of HAL pins or parameters. Elements can be added here by clicking on them in the tree view, as shown in {numref}`fig:halshow_watch`.
+- A "WATCH" tab where you can monitor and set values of {{HAL}} pins or parameters. Elements can be added here by clicking on them in the tree view, as shown in {numref}`fig:halshow_watch`.
 - A "SETTINGS" tab with various options such as refresh interval or display format of parameters.
 
 The {menuselection}`File` menu allows saving monitored elements from the "WATCH" tab to a file, as well as loading an existing list of elements to monitor from a file.
@@ -415,7 +415,7 @@ Halshow tool showing the "WATCH" tab.
 
 ### Halscope
 
-`halscope` is a graphical tool that provides an oscilloscope for HAL. It allows capturing and displaying the values of pins, signals, and parameters over a period of time. This tool is shown in {numref}`fig:halscope`. The {menuselection}`File` menu allows saving the current configuration or opening a previously saved configuration. When `halscope` is closed, the configuration is automatically saved to the `autosave.halscope` file.
+`halscope` is a graphical tool that provides an oscilloscope for {{HAL}}. It allows capturing and displaying the values of pins, signals, and parameters over a period of time. This tool is shown in {numref}`fig:halscope`. The {menuselection}`File` menu allows saving the current configuration or opening a previously saved configuration. When `halscope` is closed, the configuration is automatically saved to the `autosave.halscope` file.
 
 :::{figure} images/linuxcnc/hal_oscilloscope.png
 :name: fig:halscope
@@ -427,7 +427,7 @@ You can open the Halscope tool from the AXIS graphical interface by clicking on 
 
 ### Halreport
 
-`halreport` is a command-line tool that generates a report on HAL connections. The command's help output is as follows:
+`halreport` is a command-line tool that generates a report on {{HAL}} connections. The command's help output is as follows:
 
 ```text
 Usage:
@@ -449,11 +449,11 @@ The generated report displays all signal connections and indicates potential iss
 
 ## Ladder Logic Programming
 
-LinuxCNC includes the ClassicLadder component, a free implementation of a ladder interpreter published under the LGPL.
+LinuxCNC includes the ClassicLadder component, a free implementation of a ladder interpreter published under the [{{LGPL}}](https://gnu.org/licenses/lgpl.html).
 
-Ladder logic, or the ladder programming language, is a method for drawing electrical logic diagrams. Originally conceived to describe control systems using relays, this approach has become a widely used graphical language for programming PLCs. It derives its name from the fact that programs in this language resemble ladders, with two vertical rails and a series of horizontal rungs between them.
+Ladder logic, or the ladder programming language, is a method for drawing electrical logic diagrams. Originally conceived to describe control systems using relays, this approach has become a widely used graphical language for programming {{PLC}} devices. It derives its name from the fact that programs in this language resemble ladders, with two vertical rails and a series of horizontal rungs between them.
 
-To use ClassicLadder, you must load the `classicladder_rt` real-time module in HAL and add the `classicladder.0.refresh` function to the `servo-thread` thread using the following commands:
+To use ClassicLadder, you must load the `classicladder_rt` real-time module in {{HAL}} and add the `classicladder.0.refresh` function to the `servo-thread` thread using the following commands:
 
 ```hal
 loadrt classicladder_rt addf classicladder.0.refresh servo-thread
@@ -467,10 +467,10 @@ Once this is done, you can open the ClassicLadder graphical interface with the s
 ClassicLadder graphical interface.
 :::
 
-In our test setup, ladder logic has been used to program the operation of the LED indicator panel. The program created with ClassicLadder has been saved in the `myladder.clp` file. To use it in LinuxCNC, it can be loaded with the following HAL command:
+In our testbed setup, ladder logic has been used to program the operation of the LED indicator panel. The program created with ClassicLadder has been saved in the `myladder.clp` file. To use it in LinuxCNC, it can be loaded with the following {{HAL}} command:
 
 ```hal
 loadusr classicladder myladder.clp -nogui
 ```
 
-The LinuxCNC user manual {cite}`linuxcncdoc` includes a detailed guide to ClassicLadder. A good introduction to ClassicLadder is "The Feral Engineer"'s "Classicladder tutorials" series on YouTube: <https://www.youtube.com/playlist?list=PLTYvfbjLClpfAfJSGhZUecgXFwVPY5e09>.
+The LinuxCNC user manual {cite}`linuxcncdoc` includes a detailed guide to ClassicLadder. Another good introduction to ClassicLadder is "The Feral Engineer"'s "Classicladder tutorials" series on YouTube: <https://www.youtube.com/playlist?list=PLTYvfbjLClpfAfJSGhZUecgXFwVPY5e09>.

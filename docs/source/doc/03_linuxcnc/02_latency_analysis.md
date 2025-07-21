@@ -1,6 +1,6 @@
 # System Latency Analysis
 
-As mentioned in {numref}`sec:linuxcnc_installation`, LinuxCNC requires a real-time operating system (RTOS), a type of operating system designed for real-time device and process control. Unlike traditional operating systems, RTOSs are engineered to ensure that critical tasks are completed within strict time limits. These systems are crucial in applications where response time is vital, such as industrial control systems, aircraft navigation systems, and automotive anti-lock braking systems, among others.
+As mentioned in {numref}`sec:linuxcnc_installation`, LinuxCNC requires a real-time operating system (RTOS), a type of operating system designed for real-time device and process control. Unlike traditional operating systems, RTOSs are engineered to ensure that critical tasks are completed within strict time limits. These systems are needed in applications where response time is vital, such as industrial control systems, aircraft navigation systems, and automotive anti-lock braking systems, among others.
 
 There are two primary types of real-time operating systems:
 

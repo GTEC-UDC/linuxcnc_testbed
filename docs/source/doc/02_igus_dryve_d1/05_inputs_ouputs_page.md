@@ -25,9 +25,9 @@ Controller digital logic levels.
 To interact with the controller's digital inputs and outputs, we use the MESA 7I96S and 7I77 boards:
 
 - The MESA 7I96S board transmits step and direction signals to the stepper motor controller; these signals operate on 5 V logic.
-- The MESA 7I77 board sends "start" and "enable" signals, and reads the "ready," "alert," and "error" outputs from the controllers (refer to the wiring diagram in the `pruebas_robot.pdf` file). The logic voltage for the MESA 7I77 board can be adjusted by supplying input TB2.1 ("field power") with the desired voltage, ranging from 5 V to 28 V.
+- The MESA 7I77 board sends "start" and "enable" signals, and reads the "ready," "alert," and "error" outputs from the controllers (refer to the wiring diagram in the {{project_url_link}}. The logic voltage for the MESA 7I77 board can be adjusted by supplying input TB2.1 ("field power") with the desired voltage, ranging from 5 V to 28 V.
 
-Because the MESA 7I96S board can only use 5 V logic for step and direction signals, we have set the logic voltage for both the Igus dryve D1 controllers (X2.11 input) and the MESA 7I77 board (TB2.1 input) to 5 V.
+Because the MESA 7I96S board can only use 5 V logic for step and direction signals, we have set the logic voltage for both the igus® dryve D1 controllers (X2.11 input) and the MESA 7I77 board (TB2.1 input) to 5 V.
 
 The sections available on this page are:
 
@@ -43,7 +43,7 @@ The sections available on this page are:
 
 - **Digital Input Switching**: This parameter determines how the system interprets digital input signals. The available options are PNP and NPN:
 
-  - **PNP** (sourcing): In the activated state, the input is raised to the voltage applied at X2.11. In the deactivated state, the input is grounded via a pull-down resistor. In this configuration, current flows from the output of the higher-level control system to the input of the Igus dryve D1.
-  - **NPN** (sinking): In the activated state, the input is grounded. In the deactivated state, the input is raised to the voltage applied at X2.11 due to a pull-up resistor. In this configuration, current flows from the input of the Igus dryve D1 to the output of the higher-level control system.
+  - **PNP** (sourcing): In the activated state, the input is raised to the voltage applied at X2.11. In the deactivated state, the input is grounded via a pull-down resistor. In this configuration, current flows from the output of the higher-level control system to the input of the igus® dryve D1.
+  - **NPN** (sinking): In the activated state, the input is grounded. In the deactivated state, the input is raised to the voltage applied at X2.11 due to a pull-up resistor. In this configuration, current flows from the input of the igus® dryve D1 to the output of the higher-level control system.
 
     Since all inputs and outputs of the MESA boards are of the PNP (sourcing) type, we will leave this option set to the default value "PNP."
