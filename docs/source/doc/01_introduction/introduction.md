@@ -2,7 +2,7 @@
 
 The system uses LinuxCNC as its control platform, with two Igus dryve D1 controllers which are used to control a stepper motor and a brushless motor, respectively. The system diagram is shown in {numref}`fig:system_diagram`. Below, we detail the system's configuration, including the boards and components used.
 
-:::{ext-figure} images/system_diagram/system_diagram.\*
+:::{ext-figure} images/system_diagram.\*
 :height-html: 300px
 :name: fig:system_diagram
 

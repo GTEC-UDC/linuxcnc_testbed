@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.0078851"
-     inkscape:cx="354.20704"
-     inkscape:cy="73.421066"
+     inkscape:zoom="16.126162"
+     inkscape:cx="356.93553"
+     inkscape:cy="127.86676"
      inkscape:window-width="1920"
      inkscape:window-height="1008"
      inkscape:window-x="0"
@@ -48,6 +48,11 @@
        empspacing="5"
        enabled="true"
        visible="false" />
+    <sodipodi:guide
+       position="170.8434,53.72661"
+       orientation="1,0"
+       id="guide9"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <defs
      id="defs1">
@@ -381,19 +386,24 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.264583;stroke-dasharray:none"
-       x="34.991531"
-       y="46.306202"
+       x="35.042332"
+       y="46.3951"
        id="text1"><tspan
          sodipodi:role="line"
          id="tspan1"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';fill:#000000;stroke:none;stroke-width:0.264583"
-         x="34.991531"
-         y="46.306202">Interruptores</tspan><tspan
+         x="35.042332"
+         y="46.3951">Limit</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';fill:#000000;stroke:none;stroke-width:0.264583"
-         x="34.991531"
-         y="51.597862"
-         id="tspan2">de límite</tspan></text>
+         x="35.042332"
+         y="51.68676"
+         id="tspan8">switches</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';fill:#000000;stroke:none;stroke-width:0.264583"
+         x="35.042332"
+         y="56.978424"
+         id="tspan2" /></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none"
        id="rect2"
@@ -468,7 +478,7 @@
        id="rect12-5"
        width="25"
        height="15"
-       x="115"
+       x="117.5"
        y="65"
        rx="2"
        ry="2" />
@@ -476,18 +486,18 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.264583;stroke-dasharray:none"
        x="129.91533"
-       y="45.93367"
+       y="45.997166"
        id="text14"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';fill:#000000;stroke:none;stroke-width:0.264583"
          x="129.91533"
-         y="45.93367"
-         id="tspan13">IGUS</tspan><tspan
+         y="45.997166"
+         id="tspan13">igus®</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';fill:#000000;stroke:none;stroke-width:0.264583"
          x="129.91533"
-         y="51.225334"
-         id="tspan14">Dryve D1</tspan></text>
+         y="51.288826"
+         id="tspan14">dryve D1</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none"
        id="rect16"
@@ -501,18 +511,18 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.264583;stroke-dasharray:none"
        x="129.91533"
-       y="95.93367"
+       y="95.997169"
        id="text18"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';fill:#000000;stroke:none;stroke-width:0.264583"
          x="129.91533"
-         y="95.93367"
-         id="tspan17">IGUS</tspan><tspan
+         y="95.997169"
+         id="tspan17">igus®</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';fill:#000000;stroke:none;stroke-width:0.264583"
          x="129.91533"
-         y="101.22533"
-         id="tspan18">Dryve D1</tspan></text>
+         y="101.28883"
+         id="tspan18">dryve D1</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linejoin:miter;stroke-dasharray:none;marker-end:url(#marker8)"
        d="M 65.000001,64.999998 V 46.116666 a 2.1166667,2.1166667 135 0 1 2.116667,-2.116667 h 51.544292"
@@ -537,7 +547,7 @@
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none"
        id="rect27"
-       width="30"
+       width="25.711109"
        height="20"
        x="165"
        y="40"
@@ -546,39 +556,39 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.264583;stroke-dasharray:none"
-       x="180"
+       x="177.85556"
        y="46"
        id="text28"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';fill:#000000;stroke:none;stroke-width:0.264583"
-         x="180"
+         x="177.85556"
          y="46"
          id="tspan27">Motor 1</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';fill:#000000;stroke:none;stroke-width:0.264583"
-         x="180"
+         x="177.85556"
          y="51.291664"
-         id="tspan28">(sin escobillas)</tspan></text>
+         id="tspan28">(brushless)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.264583;stroke-dasharray:none"
-       x="179.83914"
+       x="177.69469"
        y="58.540932"
        id="text29"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';fill:#000000;stroke:none;stroke-width:0.264583"
-         x="179.83914"
+         x="177.69469"
          y="58.540932"
          id="tspan29">Encoder</tspan></text>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.264583;stroke-linejoin:miter;stroke-dasharray:none"
-       d="m 165,53.999999 h 30"
+       d="m 165,53.999999 h 25.71111"
        id="path29"
        sodipodi:nodetypes="cc" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none"
        id="rect32"
-       width="30"
+       width="25.711109"
        height="20"
        x="165"
        y="90"
@@ -587,33 +597,33 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.264583;stroke-dasharray:none"
-       x="180"
+       x="177.85556"
        y="96"
        id="text34"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';fill:#000000;stroke:none;stroke-width:0.264583"
-         x="180"
+         x="177.85556"
          y="96"
          id="tspan33">Motor 2</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';fill:#000000;stroke:none;stroke-width:0.264583"
-         x="180"
+         x="177.85556"
          y="101.29166"
-         id="tspan34">(paso a paso)</tspan></text>
+         id="tspan34">(stepper)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.264583;stroke-dasharray:none"
-       x="179.83914"
+       x="177.69469"
        y="108.54093"
        id="text35"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';fill:#000000;stroke:none;stroke-width:0.264583"
-         x="179.83914"
+         x="177.69469"
          y="108.54093"
          id="tspan35">Encoder</tspan></text>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:0.264583;stroke-linejoin:miter;stroke-dasharray:none"
-       d="m 165,103.99999 30,0"
+       d="m 165,103.99999 25.71111,0"
        id="path35"
        sodipodi:nodetypes="cc" />
     <path
@@ -631,7 +641,7 @@
          id="tspan37"
          style="fill:#000000;stroke:none;stroke-width:0.264583"
          x="144"
-         y="46.500004">Potencia</tspan></text>
+         y="46.500004">Power</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linejoin:miter;stroke-dasharray:none;marker-end:url(#marker8)"
        d="m 140,97.499999 h 23.58899"
@@ -647,7 +657,7 @@
          id="tspan39"
          style="fill:#000000;stroke:none;stroke-width:0.264583"
          x="144"
-         y="96.5">Potencia</tspan></text>
+         y="96.5">Power</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linejoin:miter;stroke-dasharray:none;marker-end:url(#marker8)"
        d="M 165,56.999998 H 77.116668 a 2.1166667,2.1166667 135 0 0 -2.116667,2.116667 v 4.398333"
@@ -686,7 +696,7 @@
          id="tspan47"
          style="fill:#000000;stroke:none;stroke-width:0.264583"
          x="147"
-         y="56">Posición</tspan></text>
+         y="56">Position</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-width:0.264583;stroke-linejoin:miter;stroke-dasharray:none"
@@ -697,7 +707,7 @@
          id="tspan49"
          style="fill:#000000;stroke:none;stroke-width:0.264583"
          x="147"
-         y="106">Posición</tspan></text>
+         y="106">Position</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-width:0.264583;stroke-dasharray:none"
@@ -708,7 +718,7 @@
          id="tspan51"
          style="text-align:start;text-anchor:start;fill:#000000;stroke:none;stroke-width:0.264583"
          x="84"
-         y="43">Velocidad</tspan></text>
+         y="43">Speed</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-width:0.264583;stroke-dasharray:none"
@@ -719,7 +729,7 @@
          id="tspan53"
          style="text-align:start;text-anchor:start;fill:#000000;stroke:none;stroke-width:0.264583"
          x="84"
-         y="50">Advertencia/Error</tspan></text>
+         y="50">Warning/Error</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-width:0.264583;stroke-dasharray:none"
@@ -730,7 +740,7 @@
          id="tspan54"
          style="text-align:start;text-anchor:start;fill:#000000;stroke:none;stroke-width:0.264583"
          x="84"
-         y="93">Advertencia/Error</tspan></text>
+         y="93">Warning/Error</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linejoin:miter;stroke-dasharray:none;marker-end:url(#marker8)"
        d="m 45.000001,74.999998 h 7.883333 a 2.1166667,2.1166667 45 0 1 2.116667,2.116667 V 98.883333 A 2.1166667,2.1166667 45 0 0 57.116668,101 h 61.468682"
@@ -748,7 +758,7 @@
          id="tspan55"
          style="text-align:start;text-anchor:start;fill:#000000;stroke:none;stroke-width:0.264583"
          x="84"
-         y="100">Paso/dirección</tspan></text>
+         y="100">Step/direction</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none"
        id="rect55"
@@ -784,26 +794,26 @@
          id="tspan3"
          style="stroke-width:1.67587"
          x="95"
-         y="70"></tspan></text>
+         y="70" /></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke-width:1.67587;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       x="127.49153"
-       y="71.420502"
+       x="129.95767"
+       y="71.306198"
        id="text10"><tspan
          sodipodi:role="line"
-         id="tspan10"
          style="font-size:4.23333px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:1.67587"
-         x="127.49153"
-         y="71.420502">Indicadores</tspan><tspan
+         x="129.95767"
+         y="71.306198"
+         id="tspan11">LED</tspan><tspan
          sodipodi:role="line"
          style="font-size:4.23333px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:1.67587"
-         x="127.49153"
-         y="76.712166"
-         id="tspan11">LED</tspan></text>
+         x="129.95767"
+         y="76.597862"
+         id="tspan9">indicators</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linejoin:miter;stroke-dasharray:none;marker-end:url(#marker8)"
-       d="m 80.132293,72.499999 33.466057,0"
+       d="m 80.132293,72.499999 35.828677,0"
        id="path11"
        sodipodi:nodetypes="cc" />
   </g>
