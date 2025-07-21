@@ -3,36 +3,31 @@
 
 :::{toctree}
 :maxdepth: 2
-:caption: Índice
+:caption: Index
 
-01_instalacion.md
-02_analisis_latencia.md
-03_ajuste_latencia.md
-04_configuracion_mesa_7i96s.md
-05_configuracion_mesa_7i77.md
-06_linuxcnc_introduccion.md
-07_linuxcnc_uso_basico.md
-08_linuxcnc_configuracion.md
+01_installation.md
+02_latency_analysis.md
+03_latency_tuning.md
+04_mesa_7i96s_configuration.md
+05_mesa_7i77_configuration.md
+06_linuxcnc_introduction.md
+07_linuxcnc_basic_usage.md
+08_linuxcnc_configuration.md
 :::
 
-LinuxCNC (<https://linuxcnc.org/>), anteriormente conocido como el EMC, es un software Linux libre
-y de código abierto que proporciona un sistema de control numérico para
-controlar máquinas de CNC con ordenadores de propósito general.
+LinuxCNC (<https://linuxcnc.org/>), formerly known as EMC, is a free and open-source Linux numerical control system for operating CNC machines using general-purpose computers.
 
-En esta sección se proporciona una pequeña guía de uso y configuración
-de LinuxCNC para el sistema del montaje de prueba. Para más detalles se recomienda consultar el
-manual de usuario de LinuxCNC {cite}`linuxcncdoc`. Otros recursos de interés de LinuxCNC son también:
+This section provides a brief guide to using and configuring LinuxCNC for the testbed system. For more in-depth information, consult the LinuxCNC user manual {cite}`linuxcncdoc`. Other valuable LinuxCNC resources are:
 
-- Foro de LinuxCNC: <https://forum.linuxcnc.org/>.
-- Vídeos "LinuxCNC for the Hobbyist" de "Joe Hildreth" en YouTube:
+- LinuxCNC Forum: <https://forum.linuxcnc.org/>
+- "LinuxCNC for the Hobbyist" video series by "Joe Hildreth" on YouTube:
     <https://www.youtube.com/playlist?list=PLaamliiI72ntlrHKIFjh2VjmehRGgZpjm>
-- Vídeos de "The Feral Engineer" en YouTube:
+- Videos by "The Feral Engineer" on YouTube:
   - LinuxCNC bare bones:
         <https://www.youtube.com/playlist?list=PLTYvfbjLClpflFA3C8ZJ5H30vnReQXRii>
   - LinuxCNC Basic HAL tutorials:
         <https://www.youtube.com/playlist?list=PLTYvfbjLClpfpy3xu1bx3kndiktXZVwyg>
   - Classicladder tutorials:
         <https://www.youtube.com/playlist?list=PLTYvfbjLClpfAfJSGhZUecgXFwVPY5e09>
-- Vídeo "CNC Motion Control with LinuxCNC + Mesa FPGA Card" de
-    "Marco Reps" en YouTube:
+- "CNC Motion Control with LinuxCNC + Mesa FPGA Card" video by "Marco Reps" on YouTube:
     <https://www.youtube.com/watch?v=1dy8Dgzcgq4>

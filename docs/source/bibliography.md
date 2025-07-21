@@ -1,4 +1,4 @@
-# Bibliografía
+# Bibliography
 
 :::{bibliography}
 :::

@@ -63,13 +63,6 @@ numfig_secnum_depth = 0
 math_numfig = True
 highlight_language = "none"
 
-numfig_format = {
-    "code-block": "Código %s",
-    # 'figure': 'Figura %s',
-    # 'section': 'Sección',
-    # 'table': 'Tabla %s',
-}
-
 # Define acronyms. These will be added to rst_prolog using the abbr directive
 acronyms = {
     "ACPI": "Advanced Configuration and Power Interface",
@@ -103,12 +96,6 @@ acronyms = {
 
 for acronym, text in acronyms.items():
     myst_substitutions[acronym] = f"{{abbr}}`{acronym} ({text})`"
-
-
-# -- Options for internationalization ----------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-internationalization
-
-language = "es"
 
 
 # -- Options for HTML output -------------------------------------------------
