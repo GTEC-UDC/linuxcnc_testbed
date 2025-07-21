@@ -97,7 +97,7 @@ net pid-x-pos-fb => pid.x.feedback
 net pid-x-pos-fb => joint.0.motor-pos-fb
 
 
-# --- setup home / limit switch signals ---
+# --- Setup home / limit switch signals ---
 
 net y-sw <= hm2_7i96s.0.gpio.001.in
 net y-sw => joint.0.home-sw-in
@@ -168,7 +168,7 @@ net pid-c-pos-fb => pid.c.feedback
 net pid-c-pos-fb => joint.1.motor-pos-fb
 
 
-# --- setup home / limit switch signals ---
+# --- Setup home / limit switch signals ---
 
 net c-index-enable <=> hm2_7i96s.0.encoder.00.index-enable
 net c-index-enable <=> joint.1.index-enable
@@ -192,7 +192,7 @@ net Y-error <= hm2_7i96s.0.7i77.0.0.input-02
 
 # --- Fault signal ---
 # We set the fault signal if any controller signals an error or alert
-# or if the user press the estop button
+# or if the user presses the estop button
 
 net remote-estop <= hm2_7i96s.0.7i77.0.0.input-13
 
