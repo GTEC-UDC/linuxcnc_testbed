@@ -40,9 +40,14 @@ doc/02_igus_dryve_d1/00_index.md
 doc/03_linuxcnc/00_index.md
 :::
 
+:::{raw} latex
+% Do not show section numbers for the following sections in latex
+\setcounter{secnumdepth}{-1}
+:::
+
 :::{toctree}
 :maxdepth: 1
 
-bibliography.md
 fdl-1.3.md
+bibliography.md
 :::

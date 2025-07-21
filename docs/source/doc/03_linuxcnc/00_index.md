@@ -1,20 +1,6 @@
 (sec:linuxcnc)=
 # LinuxCNC
 
-:::{toctree}
-:maxdepth: 2
-:caption: Table of Contents
-
-01_installation.md
-02_latency_analysis.md
-03_latency_tuning.md
-04_mesa_7i96s_configuration.md
-05_mesa_7i77_configuration.md
-06_linuxcnc_introduction.md
-07_linuxcnc_basic_usage.md
-08_linuxcnc_configuration.md
-:::
-
 LinuxCNC (<https://linuxcnc.org/>), formerly known as the {{EMC}}, is a free and open-source Linux numerical control system for operating {{CNC}} machines using general-purpose computers.
 
 This section provides a brief guide to using and configuring LinuxCNC for the testbed system. For more in-depth information, consult the LinuxCNC user manual {cite}`linuxcncdoc`. Other valuable LinuxCNC resources are:
@@ -31,3 +17,17 @@ This section provides a brief guide to using and configuring LinuxCNC for the te
         <https://www.youtube.com/playlist?list=PLTYvfbjLClpfAfJSGhZUecgXFwVPY5e09>
 - "CNC Motion Control with LinuxCNC + Mesa FPGA Card" video by "Marco Reps" on YouTube:
     <https://www.youtube.com/watch?v=1dy8Dgzcgq4>
+
+:::{toctree}
+:maxdepth: 2
+:caption: Table of Contents
+
+01_installation.md
+02_latency_analysis.md
+03_latency_tuning.md
+04_mesa_7i96s_configuration.md
+05_mesa_7i77_configuration.md
+06_linuxcnc_introduction.md
+07_linuxcnc_basic_usage.md
+08_linuxcnc_configuration.md
+:::

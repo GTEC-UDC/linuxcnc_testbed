@@ -7,6 +7,7 @@ import os
 import re
 import sys
 import textwrap
+import sphinx.builders.latex.transforms
 from sphinx.highlighting import lexers
 
 # extend system path
@@ -40,6 +41,15 @@ extensions = [
 
 bibtex_bibfiles = ["bib/references.bib"]
 bibtex_default_style = "unsrtalpha"
+
+# Workaround to match bibliography format in HTML/Text and LaTeX Backends
+# https://sphinxcontrib-bibtex.readthedocs.io/en/latest/usage.html
+# https://github.com/sphinx-doc/sphinx/issues/4775
+class DummyTransform(sphinx.builders.latex.transforms.BibliographyTransform):
+    def run(self, **kwargs):
+        pass
+
+sphinx.builders.latex.transforms.BibliographyTransform = DummyTransform
 
 # pygments_style = "manni"
 # pygments_dark_style = "monokai"
@@ -143,7 +153,7 @@ latex_logo = "images/logos/logo_udc_gtec_citic.pdf"
 latex_documents = [
     (
         "index",
-        "linuxcncmotorcontroltestbed.tex",
+        "linuxcnc_motor_control_testbed.tex",
         project,
         "Tomás Domínguez Bolaño \\and Valentín Barral Vales \\and Carlos José Escudero Cascón \\and José Antonio García Naya",
         "manual",
@@ -181,14 +191,6 @@ latex_elements = {
         ]{plex-otf} %
         """
     ),
-    # "fontpkg": textwrap.dedent(
-    #     r"""
-    #     \usepackage{plex-serif}
-    #     \usepackage{plex-sans}
-    #     \usepackage{plex-mono}
-    #     \renewcommand*\familydefault{\sfdefault}
-    #     """
-    # ),
     "fvset": textwrap.dedent(
         r"""\fvset{
         fontsize=\footnotesize,
