@@ -4,6 +4,7 @@ message: >-
   If you use this project, please cite it using the metadata
   from this file.
 type: software
+doi: 10.5281/zenodo.15911192
 authors:
   - orcid: 'https://orcid.org/0000-0001-7470-0315'
     affiliation: 'CITIC Research Center, University of A Coruña'
@@ -21,11 +22,6 @@ authors:
     affiliation: 'CITIC Research Center, University of A Coruña'
     given-names: José A.
     family-names: García-Naya
-identifiers:
-  - type: doi
-    value: https://doi.org/10.5281/zenodo.15911192
-    description: >-
-      The DOI of the work.
 repository-code: 'https://github.com/GTEC-UDC/linuxcnc_testbed'
 abstract: >
   A motor control testbed using the open-source LinuxCNC
