@@ -9,7 +9,7 @@ This system was used to develop and validate the control system for [a large hig
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-limegreen.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![License: GNU FDL 1.3](https://img.shields.io/badge/License-GNU%20FDL%201.3-limegreen.svg)](https://www.gnu.org/licenses/fdl-1.3.en.html)
 [![DOI](https://zenodo.org/badge/996257862.svg)](https://zenodo.org/badge/latestdoi/996257862)
-[![Documentation](https://img.shields.io/badge/docs-sphinx-blue.svg)](docs/)
+[![Documentation](https://img.shields.io/badge/docs-sphinx-blue.svg)](https://gtec-udc.github.io/linuxcnc_testbed/)
 
 </div>
 
